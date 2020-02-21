@@ -44,16 +44,23 @@ fun main() {
     println("bonificação ${gui.bonificacao}")
     println("plr ${gui.plr}")
 
-    if(fran.autentica(4000)){
+    if(gui.autentica(4000)){
         println("autenticou com sucesso")
     } else {
         println("falha na autentição")
     }
 
+    val maria = Analista(
+        nome = "Maria",
+        cpf = "444.444.444-44",
+        salario = 3000.0
+    )
+
     val calculadora = CalculadoraBonificacao()
     calculadora.registra(alex)
     calculadora.registra(fran)
     calculadora.registra(gui)
+    calculadora.registra(maria)
 
     println("total de bonificação: ${calculadora.total}")
 }
